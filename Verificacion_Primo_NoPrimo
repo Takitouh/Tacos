@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class EsPrimoONoprimo {
+    public static void main(String[] args) {
+        float Num;
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Digite el numero que quiere averiguar si es primo o no.");
+        Num = entrada.nextFloat();
+        System.out.println(PrimoNoPrimo(Num));
+    }
+
+    public static String PrimoNoPrimo(float Num){
+        int Aux=0;
+        String Evaluacion;
+        for (int i = 1; i <= Num; i++) {
+            if (Num%i == 0){
+                Aux = Aux+1;
+            }
+        }
+        if (Aux == 2){
+            Evaluacion = "El numero "+Num+" es primo";
+        }
+        else {
+            Evaluacion = "El numero "+Num+" no es primo";
+
+        }
+        return Evaluacion;
+    }
+}
